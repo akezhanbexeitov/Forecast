@@ -7,7 +7,7 @@
     const city = ref(null)
     let weatherInfo = ref(null)
     const getWeather = () => {
-        fetch(`${ BASE_URL }?q=${ city.value }&appid=${ API_KEY }`)
+        fetch(`${ BASE_URL }?q=${ city.value }&units=metric&appid=${ API_KEY }`)
             .then(res => res.json())
             .then(data => {
                 weatherInfo = data
@@ -33,7 +33,7 @@
                         @keyup.enter="getWeather"
                     >
                   </div>
-                  <WeatherSummary />
+                  <WeatherSummary :weatherInfo="weatherInfo"/>
                 </div>
               </section>
               <section class="section section-right">
