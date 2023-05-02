@@ -1,10 +1,7 @@
 <script setup>
-    const props = defineProps({
-        weatherInfo: {
-            type: [Object, null],
-            required: true
-        }
-    })
+    import { useWeatherInfo } from '../stores/weatherInfo';
+
+    const weatherInfo = useWeatherInfo()
 </script>
 
 <template>
@@ -17,7 +14,7 @@
             <div class="block-bottom-texts">
                 <div class="block-bottom-text-block">
                 <div class="block-bottom-text-block-title">
-                    Humidity: {{ weatherInfo?.main?.humidity }} %
+                    Humidity: {{ weatherInfo?.weather?.main?.humidity }} %
                 </div>
                 <div class="block-bottom-text-block-desc">
                     Humidity is the concentration of water vapor present in the air. Water vapor, the gaseous state of water, is generally invisible to the human eye.

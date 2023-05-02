@@ -5,14 +5,16 @@
     import Highlights from './components/Highlights.vue'
     import Humidity from './components/Humidity.vue'
     import Coordinates from './components/Coordinates.vue';
+    import { useWeatherInfo } from './stores/weatherInfo';
 
     const city = ref(null)
-    let weatherInfo = ref(null)
+    const weatherInfo = useWeatherInfo()
+
     const getWeather = () => {
         fetch(`${ BASE_URL }?q=${ city.value }&units=metric&appid=${ API_KEY }`)
             .then(res => res.json())
             .then(data => {
-                weatherInfo = data
+                weatherInfo.setWeatherInfo(data)
                 city.value = null
             })
             .catch(error => console.log(error))
@@ -36,7 +38,7 @@
                         placeholder="Type city name here"
                     >
                   </div>
-                  <WeatherSummary :weatherInfo="weatherInfo"/>
+                  <WeatherSummary />
                 </div>
               </section>
               <section class="section section-right">
@@ -44,8 +46,8 @@
               </section> 
             </div>
             <div class="sections">
-              <Coordinates :weatherInfo="weatherInfo"/>
-              <Humidity :weatherInfo="weatherInfo"/>
+              <Coordinates />
+              <Humidity />
             </div>
           </div>
         </div>
