@@ -27,7 +27,12 @@
     <div class="wrapper">
         <header class="header">
             <div class="search">
-                <input type="text" class="input">
+                <input 
+                    type="text"
+                    class="input"
+                    v-model="city"
+                    @keyup.enter="getWeather(city)"
+                >
             </div>
             <nav class="navigation">
                 <ul class="nav-list">
