@@ -63,6 +63,15 @@
         margin-bottom: 15px;
     }
 
+    .image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .image img {
+        width: 100%;
+    }
+
     .temperature {
         font-size: 28px;
         text-align: center;
