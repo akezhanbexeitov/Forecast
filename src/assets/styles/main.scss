@@ -1,2 +1,7 @@
 @import './variables';
-@import "./common"
+@import './common';
+@import './reset';
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif
+}
