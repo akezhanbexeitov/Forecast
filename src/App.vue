@@ -24,109 +24,50 @@
 </script>
 
 <template>
-    <div class="page">
-      <main class="main">
-        <div class="container">
-          <div class="laptop">
-            <div class="sections">
-              <section class="section section-left">
-                <div class="info">
-                  <div class="city-inner">
-                    <input 
-                        v-model="city" 
-                        type="text" 
-                        class="search"
-                        @keyup.enter="getWeather"
-                        placeholder="Type city name here"
-                    >
-                  </div>
-                  <WeatherSummary />
-                </div>
-              </section>
-              <section class="section section-right">
-                <Highlights />
-              </section> 
+    <div class="wrapper">
+        <header class="header">
+            <div class="search">
+                <input type="text" class="input">
             </div>
-            <div class="sections">
-              <Coordinates />
-              <Humidity />
-            </div>
-          </div>
-        </div>
-      </main>
+        </header>
+        <main class="main">
+        
+        </main>
     </div>
+
 </template>
 
 <style lang="scss" scoped>
     @import './assets/styles/main';
-    .page {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        padding: 20px 0;
-        background-color: #59585d;
-    }
-    .laptop {
-        width: 100%;
-        padding: 20px;
-        background-color: #0e100f;
-        border-radius: 25px;
-    }
-    .sections {
-        display: flex;
-        width: 100%;
 
-        @media (max-width: 767px) {
-            flex-direction: column;
-        }
+    .wrapper {
+        border: 1px solid black;
+        max-width: 970px;
+        margin: 0 auto;
+        height: 800px;
+        padding: 20px 15px;
     }
-    .section-left {
-        width: 30%;
-        padding-right: 10px;
 
-        @media (max-width: 767px) {
-            width: 100%;
-            padding-right: 0;
-        }
-    }
-    .section-right {
-        width: 70%;
-        padding-left: 10px;
-
-        @media (max-width: 767px) {
-            width: 100%;
-            margin-top: 16px;
-            padding-left: 0;
-        }
-    }
-    .city-inner {
+    .search {
         position: relative;
         display: inline-block;
-        width: 100%;
+        width: 50%;
+    }
 
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 10px;
-            width: 25px;
-            height: 25px;
-            background: url('./assets/img/search.svg') no-repeat 50% 50%;
-            background-size: contain;
-            transform: translateY(50%);
-            cursor: pointer;
-        }
+    .search::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 10px;
+        width: 25px;
+        height: 25px;
+        background: url('./assets/img/search.svg') no-repeat 50% 50%;
+        background-size: contain;
+        transform: translateY(50%);
+        cursor: pointer;
     }
-    .info {
-        height: 100%;
-        padding: 16px;
-        background: url('./assets/img/gradient-1.jpg') no-repeat 50% 50%;
-        background-size: cover;
-        border-radius: 25px;
-    }
-    .search {
+
+    .input {
         width: 100%;
         padding: 16px;
         font-family: 'Inter', Arial, sans-serif;
@@ -136,13 +77,5 @@
         border: none;
         outline: none;
         cursor: pointer;
-    }
-    .section-bottom {
-        width: 50%;
-        margin-top: 16px;
-
-        @media (max-width: 767px) {
-            width: 100%;
-        }
     }
 </style>
