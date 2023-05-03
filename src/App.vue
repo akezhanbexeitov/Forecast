@@ -1,5 +1,5 @@
 <script setup>
-    import { ref } from 'vue';
+    import { onMounted, ref } from 'vue';
     import { API_KEY, BASE_URL } from './constants';
     import WeatherSummary from './components/WeatherSummary.vue';
     import Highlights from './components/Highlights.vue'
@@ -7,7 +7,7 @@
     import Coordinates from './components/Coordinates.vue';
     import { useWeatherInfo } from './stores/weatherInfo';
 
-    const city = ref(null)
+    const city = ref('Paris')
     const weatherInfo = useWeatherInfo()
 
     const getWeather = () => {
@@ -19,6 +19,8 @@
             })
             .catch(error => console.log(error))
     }
+
+    onMounted(() => getWeather())
 </script>
 
 <template>
