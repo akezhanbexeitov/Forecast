@@ -45,6 +45,7 @@
         </header>
         <main class="main">
             <WeatherSummary />
+            <Highlights />
         </main>
     </div>
 
@@ -111,5 +112,11 @@
         border: none;
         outline: none;
         cursor: pointer;
+    }
+
+    .main {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
     }
 </style>
