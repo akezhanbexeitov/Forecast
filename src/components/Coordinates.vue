@@ -35,15 +35,14 @@
 
 <style scoped>
     .coordinates {
-        width: 600px;
-        height: 250px;
+        width: 70%;
         padding: 20px;
         display: flex;
         align-items: center;
         gap: 20px;
         background: url('/src/assets/img/gradient-1.jpg') no-repeat 0% 0%;
         background-size: cover;
-        border-radius: 5%;
+        border-radius: 16px;
     }
     .compass {
         width: 20%;

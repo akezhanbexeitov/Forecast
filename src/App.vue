@@ -50,7 +50,7 @@
         </header>
         <main class="main">
             <WeatherSummary />
-            <Highlights />
+            <Coordinates />
         </main>
     </div>
 
