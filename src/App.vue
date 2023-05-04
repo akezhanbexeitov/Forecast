@@ -2,9 +2,6 @@
     import { onMounted, ref } from 'vue';
     import { API_KEY, BASE_URL } from './constants';
     import WeatherSummary from './components/WeatherSummary.vue';
-    import Highlights from './components/Highlights.vue'
-    import Humidity from './components/Humidity.vue'
-    import Coordinates from './components/Coordinates.vue';
     import { useWeatherInfo } from './stores/weatherInfo';
     import { RouterView, RouterLink } from 'vue-router'
 
