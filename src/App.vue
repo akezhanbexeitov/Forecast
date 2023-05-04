@@ -6,7 +6,7 @@
     import Humidity from './components/Humidity.vue'
     import Coordinates from './components/Coordinates.vue';
     import { useWeatherInfo } from './stores/weatherInfo';
-    import { RouterView } from 'vue-router'
+    import { RouterView, RouterLink } from 'vue-router'
 
     const city = ref('Paris')
     const weatherInfo = useWeatherInfo()
@@ -38,13 +38,13 @@
             <nav class="navigation">
                 <ul class="nav-list">
                     <li class="item">
-                        <a class="link" href="#">Highlights</a>
+                        <RouterLink to="/" class="link" href="#">Highlights</RouterLink>
                     </li>
                     <li class="item">
-                        <a class="link" href="#">Coordinates</a>
+                        <RouterLink to="/coordinates" class="link" href="#">Coordinates</RouterLink>
                     </li>
                     <li class="item">
-                        <a class="link" href="#">Humidity</a>
+                        <RouterLink to="/humidity" class="link" href="#">Humidity</RouterLink>
                     </li>
                 </ul>
             </nav>

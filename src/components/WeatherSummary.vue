@@ -48,6 +48,7 @@
 <style scoped>
     .weather-summary {
         width: 30%;
+        height: 415px;
         background: url('/src/assets/img/gradient-1.jpg') no-repeat 0% 0%;
         background-size: cover;
         padding: 20px;
