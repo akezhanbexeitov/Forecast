@@ -61,7 +61,6 @@
     @import './assets/styles/main';
 
     .wrapper {
-        border: 1px solid #FFF;
         max-width: 970px;
         margin: 0 auto;
         height: 800px;
