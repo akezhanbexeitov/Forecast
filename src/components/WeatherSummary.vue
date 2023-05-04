@@ -50,7 +50,7 @@
         width: 30%;
         background: url('/src/assets/img/gradient-1.jpg') no-repeat 0% 0%;
         background-size: cover;
-        padding: 15px;
+        padding: 20px;
         border-radius: 16px;
         display: flex;
         flex-direction: column;
