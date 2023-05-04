@@ -9,7 +9,7 @@
 <template>
     <section v-if="weatherInfo?.weather" class="weather-summary">
         <div class="image">
-            <img :src="`../assets/img/weather-main/${weatherInfo?.weather?.weather[0]?.description}.png`" :alt="weatherInfo?.weather?.weather[0]?.description">
+            <img :src="`/src/assets/img/weather-main/${weatherInfo?.weather?.weather[0]?.description}.png`" :alt="weatherInfo?.weather?.weather[0]?.description">
         </div>
         
         <p class="temperature">
