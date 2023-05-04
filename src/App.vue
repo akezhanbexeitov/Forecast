@@ -6,6 +6,7 @@
     import Humidity from './components/Humidity.vue'
     import Coordinates from './components/Coordinates.vue';
     import { useWeatherInfo } from './stores/weatherInfo';
+    import { RouterView } from 'vue-router'
 
     const city = ref('Paris')
     const weatherInfo = useWeatherInfo()
@@ -50,7 +51,7 @@
         </header>
         <main class="main">
             <WeatherSummary />
-            <Humidity />
+            <RouterView />
         </main>
     </div>
 
