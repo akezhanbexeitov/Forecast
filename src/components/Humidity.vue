@@ -7,7 +7,7 @@
 <template>
     <section class="humidity">
         <div class="water-drops">
-            <img class="image" src="/src/assets/img/humidity.png" alt="Compass">
+            <img class="image" src="/src/assets/img/humidity.png" alt="Water drops">
         </div>
 
         <div class="text-box">
