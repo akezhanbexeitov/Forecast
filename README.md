@@ -32,3 +32,9 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## TODO list
+- When routed to various components show it in the nav bar by highlighting
+- Add multiple cities
+- Add button to remove one city from the list
+- Add button to remove all cities from the list
