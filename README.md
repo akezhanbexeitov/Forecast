@@ -1,4 +1,9 @@
 # Forecast
+It is a website that shows the weather of the city that you type in the input field. It shows different pieces of information depending on which tab you are clicking on top.
+
+Tech stack used:  
+
+[![My Skills](https://skillicons.dev/icons?i=vue)](https://skillicons.dev), Pinia, Vue-Router
 
 This template should help get you started developing with Vue 3 in Vite.
 
